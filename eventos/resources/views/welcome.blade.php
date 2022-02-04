@@ -418,6 +418,25 @@
     @else
     <p>O nome não é Pedro</p>
     @endif
+
+    @for($i = 0; $i < count($array); $i++) <P>{{ $array[$i] }} - {{$i}}</P>
+        @if($i == 2)
+        <P>O i é 2</P>
+        @endif
+        @endfor
+
+        @php
+        $name = "joão";
+        echo $name;
+        @endphp
+
+        <P>________</P>
+        <!-- @for($i = 0; $i < count($nomes); $i++) <P>{{ $nomes[$i] }} - {{$i}}</P>@endfor -->
+
+        @foreach($nomes as $nome)
+        <p>{{$loop->index}}</p>
+        <P>{{ $nome}}</P>
+        @endforeach
 </body>
 
 </html>
